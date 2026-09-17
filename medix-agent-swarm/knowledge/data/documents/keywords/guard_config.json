@@ -1,0 +1,6 @@
+{
+  "enabled": false,
+  "threshold": 0.04,
+  "trip_count": 3,
+  "cooldown_seconds": 300
+}

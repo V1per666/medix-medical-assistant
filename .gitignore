@@ -1,0 +1,31 @@
+# --- Secrets (含真实 API Key，切勿提交) ---
+config.py
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# --- OS / Editor ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.planning/
+
+# --- 本地输出 / 日志 ---
+tmp/
+*.log
+**/logs/
+
+# --- 运行时缓存 / 会话记忆 ---
+**/session_summaries/
+**/.memory/
+
+# --- 本地工具配置（含密钥，勿提交） ---
+**/settings.local.json
+
+# --- 本地数据库 ---
+*.db

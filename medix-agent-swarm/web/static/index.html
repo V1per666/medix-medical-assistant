@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MediX 多智能体医疗助手</title>
+<link rel="stylesheet" href="/static/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>">
+</head>
+<body>
+
+<div class="app">
+  <!-- ===== 顶栏 ===== -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+          <path d="M12 4v16M4 12h16"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <h1 class="brand-title">MediX 多智能体医疗助手</h1>
+        <span class="brand-sub">MULTI-AGENT&nbsp;·&nbsp;MEDICAL&nbsp;CONSULTATION</span>
+      </div>
+    </div>
+
+    <!-- 心电脉冲装饰 -->
+    <div class="ecg-wrap" aria-hidden="true">
+      <svg class="ecg" viewBox="0 0 420 44" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="ecgGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0"/>
+            <stop offset="30%" stop-color="#2dd4bf"/>
+            <stop offset="70%" stop-color="#38bdf8"/>
+            <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <path class="ecg-line" d="M0 22 H96 L104 22 L112 8 L120 36 L128 22 H160
+                 L168 22 L172 10 L176 34 L180 22 H260
+                 L268 22 L276 6 L284 38 L292 22 H324
+                 L332 22 L336 12 L340 32 L344 22 H420"/>
+        <circle class="ecg-dot" r="2.6" fill="#2dd4bf"/>
+      </svg>
+    </div>
+
+    <div class="status" id="statusPill">
+      <span class="dot"></span>
+      <span class="status-text">系统在线</span>
+    </div>
+  </header>
+
+  <!-- ===== 聊天区 ===== -->
+  <main id="chat" class="chat">
+    <!-- 欢迎屏 -->
+    <section id="welcome" class="welcome">
+      <div class="welcome-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 4v16M4 12h16"/>
+        </svg>
+      </div>
+      <h2 class="welcome-title">您好，我是 MediX</h2>
+      <p class="welcome-desc">描述您的症状或健康问题，系统将自动调度专业 Agent 群组为您分析</p>
+      <div class="chips">
+        <button class="chip" data-q="最近总是失眠，有什么改善建议吗？">🌙 失眠困扰</button>
+        <button class="chip" data-q="高血压患者日常饮食要注意什么？">🫀 高血压饮食</button>
+        <button class="chip" data-q="感冒发烧了应该怎么办？">🤒 感冒发烧</button>
+        <button class="chip" data-q="我胸口闷，有点呼吸困难，要紧吗？">🫁 胸闷气短</button>
+      </div>
+      <div class="welcome-foot">简单问题 → 单 Agent 快速响应&nbsp;&nbsp;|&nbsp;&nbsp;复杂问题 → Swarm 多 Agent 协作</div>
+    </section>
+  </main>
+
+  <!-- ===== 输入区 ===== -->
+  <footer class="inputbar">
+    <div class="input-shell">
+      <textarea id="input" rows="1" placeholder="描述您的健康问题…（Enter 发送，Shift+Enter 换行）"></textarea>
+      <button id="send" class="send-btn" disabled aria-label="发送">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+        </svg>
+      </button>
+    </div>
+    <div class="legal">本系统仅供学习研究使用，不能替代专业医生的诊断和治疗</div>
+  </footer>
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
